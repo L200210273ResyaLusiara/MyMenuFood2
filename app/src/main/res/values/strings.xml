@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">MyMenuFood</string>
+    <string name="icon_hamburger_description">Icon Hambuger</string>
+    <string name="icon_hotdog_description">Icon Hotdog</string>
+    <string name="icon_cola_description">Icon Cola</string>
+    <string name="icon_donat_description">Icon Donat</string>
+    <string name="icon_pizza_description">Icon Pizza</string>
+    <string name="iv_header_img_description">Icon Header</string>
+    <string name="icon_user_description">Icon user</string>
+    <string name="shopping_cart_description">Icon cart</string>
+    <string name="icon_bg_description">Icon cart</string>
+    <string name="imageView3_description">Icon imageView3</string>
+    <string name="banner_description">Diskon 30%</string>
+    <string name="banner2_description">Pesan makanan lewat aplikasi dan dapatkan diskonmu</string>
+    <string name="text_gambar_pizza">Gambar Pizza</string>
+    <string name="text_rp_99_000">Rp 99.000</string>
+    <string name="_text_rp_55_000">Rp 55.000</string>
+    <string name="text_donat">Donat</string>
+    <string name="text_rp_15_000">Rp 15.000</string>
+    <string name="text_hotdog">Hotdog</string>
+    <string name="text_rp_59_000">Rp 59.000</string>
+    <string name="text_french_fries">French Fries</string>
+    <string name="text_rp_20_000">Rp 20.000</string>
+    <string name="text_cola">Cola</string>
+    <string name="text_rp_10_000">Rp 10.000</string>
+    <string name="text_hai_binarian">Hai Binarian,</string>
+    <string name="text_mau_makan_apa_hari_ini">Mau makan apa hari ini?</string>
 </resources>
