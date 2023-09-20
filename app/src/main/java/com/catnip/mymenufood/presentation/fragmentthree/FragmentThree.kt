@@ -31,6 +31,6 @@ class FragmentThree : Fragment() {
     }
 
     private fun navigateToOtherActivity() {
-        OtherActivity.startActivity(requireContext(),"Hermas",27)
+        OtherActivity.startActivity(requireContext(),"Resya",21)
     }
 }

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.catnip.mymenufood.databinding.FragmentOneBinding
-import com.catnip.mymenufood.model.Person
+import com.catnip.mymenufood.model.Menu
 
 class FragmentOne : Fragment() {
 
@@ -31,20 +31,20 @@ class FragmentOne : Fragment() {
             navigateToFragmentTwo()
         }
         binding.btnSendDataNavigate.setOnClickListener {
-            navigateToFragmentTwo(getPerson())
+            navigateToFragmentTwo(getMenu())
         }
     }
 
-    private fun getPerson(): Person? {
-        return Person(
-            name = "Tony Stark",
-            job = "The Mechanic",
-            profileDesc = "Genius, Billionaire, Playboy, Philantropist",
-            profilePictUrl = "https://images.bisnis.com/posts/2017/06/22/665183/tony-stark.jpg"
+    private fun getMenu(): Menu? {
+        return Menu(
+            food = "Pizza",
+            country = "Italia",
+            foodDesc ="Pizza adalah roti berbentuk bulat pipih dengan diameter 30 cm yang dipanggang dalam oven dan biasanya disiram saus tomat serta keju dan dengan makanan tambahan lainnya (topping) yang sesuai selera penikmatnya.",
+            profilePictUrl = "https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.tokomesin.com%2Fwp-content%2Fuploads%2F2015%2F09%2Fpizza-ala-hut2-tokomesin.jpg&tbnid=aCbe0xyhlYk-3M&vet=12ahUKEwiQhab1_LiBAxWfkGMGHbtgDrkQMygPegQIARBt..i&imgrefurl=https%3A%2F%2Fwww.tokomesin.com%2Fpeluang-usaha-pizza-ala-hut-dan-analisa-usahanya.html&docid=6drYFoVcElCnwM&w=800&h=601&q=deskripsi%20pizza&client=firefox-b-d&ved=2ahUKEwiQhab1_LiBAxWfkGMGHbtgDrkQMygPegQIARBt",
         )
     }
 
-    private fun navigateToFragmentTwo(person: Person? = null) {
+    private fun navigateToFragmentTwo(person: Menu? = null) {
 
         val action = FragmentOneDirections.actionFragmentOneToFragmentTwo(person)
         findNavController().navigate(action)

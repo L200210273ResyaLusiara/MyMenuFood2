@@ -24,7 +24,7 @@
             app:destination="@id/fragmentThree" />
         <argument
             android:name="person"
-            app:argType="com.catnip.mymenufood.model.Person"
+            app:argType="com.catnip.mymenufood.model.Menu"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>

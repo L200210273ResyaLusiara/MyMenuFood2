@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.catnip.mymenufood.databinding.ActivityOtherBinding
-import com.catnip.mymenufood.model.Person
+import com.catnip.mymenufood.model.Menu
 
 
 class OtherActivity : AppCompatActivity() {
@@ -24,7 +24,7 @@ class OtherActivity : AppCompatActivity() {
     private fun getIntentData() {
         val name = intent?.getStringExtra(ARGS_NAME).orEmpty()
         val age = intent?.getIntExtra(ARGS_AGE, 0) ?: 0
-        val person = intent?.getParcelableExtra<Person>(ARGS_PERSON)
+        val person = intent?.getParcelableExtra<Menu>(ARGS_PERSON)
         Toast.makeText(this, "$name : $age", Toast.LENGTH_SHORT).show()
     }
 
@@ -40,7 +40,7 @@ class OtherActivity : AppCompatActivity() {
             intent.putExtra(ARGS_AGE,age)
             return intent
         }
-        fun startActivity(context: Context, name: String, age: Int, person: Person? = null) {
+        fun startActivity(context: Context, name: String, age: Int, person: Menu? = null) {
             val intent = Intent(context,OtherActivity::class.java)
             //intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             intent.putExtra(ARGS_NAME,name)

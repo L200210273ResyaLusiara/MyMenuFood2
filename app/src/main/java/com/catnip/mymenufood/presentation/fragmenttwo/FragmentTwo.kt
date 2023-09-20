@@ -11,8 +11,7 @@ import androidx.navigation.fragment.findNavController
 import coil.load
 import com.catnip.mymenufood.R
 import com.catnip.mymenufood.databinding.FragmentTwoBinding
-import com.catnip.mymenufood.model.Person
-import com.catnip.mymenufood.presentation.fragmenttwo.FragmentTwoArgs
+import com.catnip.mymenufood.model.Menu
 
 class FragmentTwo : Fragment() {
 
@@ -22,7 +21,7 @@ class FragmentTwo : Fragment() {
 
     private lateinit var binding : FragmentTwoBinding
 
-    private val person: Person? by lazy {
+    private val person: Menu? by lazy {
         val args = arguments
         if (args != null) {
             FragmentTwoArgs.fromBundle(args).person
@@ -49,9 +48,9 @@ class FragmentTwo : Fragment() {
         if(person != null){
             binding.llProfile.isVisible = true
             binding.ivProfileImg.load(person?.profilePictUrl)
-            binding.tvName.text = person?.name
-            binding.tvJob.text = person?.job
-            binding.tvProfileDesc.text = person?.profileDesc
+            binding.tvName.text = person?.food
+            binding.tvJob.text = person?.country
+            binding.tvProfileDesc.text = person?.foodDesc
         }else {
             binding.llProfile.isVisible = false
             Toast.makeText(requireContext(), "Profile is Null", Toast.LENGTH_SHORT).show()
